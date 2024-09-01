@@ -29,23 +29,20 @@ const CModal = () => {
   return (
     <Modal
       isVisible={cModal.visible}
-      onBackdropPress={() => handleClose()}
-      animationIn="bounceInLeft"
-      animationOut="bounceInRight">
-      <Safe>
+      onBackdropPress={() => handleClose()}>
+      <>
         <Container>
           <Header>
             <Title>{cModal.title}</Title>
           </Header>
           <Body>
-            <BIcon name={cModal.icon || 'alert'} />
             <BMessage>{cModal.message}</BMessage>
             <Button onPress={() => handleClose()}>
-              <ButtonText>OK</ButtonText>
+              <ButtonText>Fechar</ButtonText>
             </Button>
           </Body>
         </Container>
-      </Safe>
+      </>
     </Modal>
   );
 };

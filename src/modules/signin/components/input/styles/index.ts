@@ -10,7 +10,7 @@ type PropsColor = {
 
 export const Container = styled.View`
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 `;
 export const Title = styled.Text<PropsColor>`
     font-family: ${Fonts.family};

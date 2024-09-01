@@ -17,8 +17,8 @@ const Routes = () => {
       <SBar />
       <Stack.Navigator>
         <Stack.Screen name="SignIn" component={SignIn} options={noHeader} />
-        <Stack.Screen name="List" component={List} options={Header} />
-        <Stack.Screen name="Detail" component={Detail} options={Header} />
+        <Stack.Screen name="List" component={List} options={{...Header, title: "Lista de Usuários"}} />
+        <Stack.Screen name="Detail" component={Detail} options={{...Header, title:"Detalhe do Usuário"}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

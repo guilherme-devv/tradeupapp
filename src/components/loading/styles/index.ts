@@ -9,7 +9,7 @@ export const Container = styled.View`
     justify-content: center;
 `;
 export const Ldg = styled.ActivityIndicator`
-    position: absolute;
+    color: blue;
 `;
 
 export const Logo = styled.Image`

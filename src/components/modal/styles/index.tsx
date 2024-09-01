@@ -43,6 +43,6 @@ export const Button = styled.TouchableOpacity`
 export const ButtonText = styled.Text`
     font-family: ${Fonts.family};
     font-size: ${Fonts.normal}px;
-    color: ${colors.font_light};
+    color: ${colors.background_light};
     font-weight: bold;
 `;

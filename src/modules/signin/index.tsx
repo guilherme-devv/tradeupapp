@@ -46,8 +46,8 @@ const SignIn = () => {
               ? e.response.data.error
               : '';
           setCModal({
-            title: 'Atenção!',
-            message: `Não foi possível realizar o login.\nError: ${err}`,
+            title: 'Ops.. algo deu errado!',
+            message: `Esse usuário não faz parte do sistema.\nError: ${err}`,
             visible: true,
             timer: true,
             icon: 'close',
@@ -56,8 +56,8 @@ const SignIn = () => {
         });
     } else {
       setCModal({
-        title: 'Atenção!',
-        message: 'Preencha os campos corretamente!',
+        title: 'Ops.. algo deu errado',
+        message: 'Preencha os campos!',
         visible: true,
         timer: true,
       });
