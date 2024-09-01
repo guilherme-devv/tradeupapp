@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   HideButton,
@@ -9,43 +9,34 @@ import {
   TInput,
   Title,
 } from './styles';
-import IInput, { IHide } from './typescript';
+import IInput from './typescript'; // Corrigido: Assumindo que IInput seja a interface correta
 
 const Inp = (props: IInput) => {
-  const [hide, setHide] = useState<IHide>(true);
+  const [hide, setHide] = useState<boolean>(true); // Tipo booleano para hide
+
   return (
     <Container>
       <Title color={props.color}>{props.title}</Title>
       <InputContainer>
         <Icon name={props.icon} color={props.color} />
-        {props.hide ? (
-          <TInput
-            value={props.value}
-            placeholder='Senha'
-             autoCapitalize="none"
-            onChangeText={props.set}
-            keyboardType={props.keyboardType}
-            color={props.color}
-            secureTextEntry={hide}
-          />
-        ) : (
-          <TInput
-            value={props.value}
-            placeholder='E-mail'
-            autoCapitalize="none"
-            onChangeText={props.set}
-            keyboardType={props.keyboardType}
-            color={props.color}
-          />
-        )}
+        <TInput
+          value={props.value}
+          placeholder={props.hide ? 'Senha' : 'E-mail'}
+          autoCapitalize="none"
+          onChangeText={props.set}
+          keyboardType={props.keyboardType}
+          color={props.color}
+          secureTextEntry={props.hide ? hide : false}
+        />
       </InputContainer>
-      {props.hide ? (
+      {props.hide && (
         <HideButton onPress={() => setHide(!hide)}>
           <HideText>{hide ? 'Mostrar senha' : 'Ocultar Senha'}</HideText>
           <HideIcon name={hide ? 'eye' : 'eye-off'} />
         </HideButton>
-      ) : null}
+      )}
     </Container>
   );
 };
+
 export default Inp;

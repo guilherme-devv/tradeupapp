@@ -1,7 +1,6 @@
 import React from 'react';
 import colors from '../../assets/colors';
 import {Container, Ldg, Logo} from './styles';
-import logotradeup from '../../assets/images/logotradeup.png';
 import { useGeral } from '../../context';
 
 const Loading = () => {
@@ -10,7 +9,7 @@ const Loading = () => {
   if(visible){
     return (
       <Container>
-        <Logo source={logotradeup} resizeMode="contain" />
+        <Logo source={require('../../assets/images/logotradeup.png')} resizeMode="contain" />
         <Ldg size={100} color={colors.font_light} />
       </Container>
     );

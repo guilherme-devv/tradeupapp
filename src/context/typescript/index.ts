@@ -15,8 +15,8 @@ interface IList{
 
 export interface IUsers{
     loading: boolean;
-    page: number;
-    total_pages: number;
+    page: number | null;
+    total_pages: number | null;
     list: Array<IList>
 }
 
