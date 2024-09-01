@@ -9,10 +9,10 @@ import {
   TInput,
   Title,
 } from './styles';
-import IInput from './typescript'; // Corrigido: Assumindo que IInput seja a interface correta
+import IInput from './typescript';
 
 const Inp = (props: IInput) => {
-  const [hide, setHide] = useState<boolean>(true); // Tipo booleano para hide
+  const [hide, setHide] = useState<boolean>(true);
 
   return (
     <Container>

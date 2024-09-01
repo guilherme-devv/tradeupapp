@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList} from 'react-native';
+import {FlatList, ListRenderItem} from 'react-native';
 import { useGeral } from '../../../../../../context';
 import useAPI from '../../../../../../services/api';
 import {end} from '../../../../../../assets/constants/endpoints';
@@ -12,6 +12,7 @@ import {
   Name,
 } from './styles';
 import { useNavigation } from '@react-navigation/native';
+import { IList } from '../../../../../../context/typescript';
 
 const CardList = () => {
   const navigation = useNavigation();
@@ -19,7 +20,8 @@ const CardList = () => {
   const {request} = useAPI();
 
   const handleMore = () => {
-    const {page, total_pages} = users;
+    const page = users.page ?? 0;
+    const total_pages = users.total_pages ?? 0;
     if(page < total_pages){
       request(`${end.users(`${page+1}`)}`, 'GET').then(res => {
         const {page, total_pages, data} = res.data;
@@ -46,7 +48,7 @@ const CardList = () => {
     }
   };
 
-  const renderItem = ({item}) => {
+  const renderItem: ListRenderItem<IList> = ({item}) => {
     return (
       <CardContainer onPress={() => navigation.navigate('Detail', {
         costumer: item
@@ -67,7 +69,7 @@ const CardList = () => {
     <FlatList
       data={users.list}
       renderItem={renderItem}
-      keyExtractor={item => item.id}
+      keyExtractor={item => String(item.id)}
       onEndReached={handleMore}
       onEndReachedThreshold={0.1}
     />

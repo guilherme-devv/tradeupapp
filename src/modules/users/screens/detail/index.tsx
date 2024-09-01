@@ -3,17 +3,24 @@ import {Safe} from '../../../styles';
 import {
   Body,
   Card,
-  CircleID,
-  CircleText,
   Container,
   Header,
   TextContainer,
   TextItem,
   TextTitle,
 } from './styles';
+import { IList } from '../../../../context/typescript';
+
+export interface DetailProps {
+  route: {
+    params: {
+      costumer: IList;
+    };
+  };
+}
 
 
-const Detail = (props) => {
+const Detail = (props: DetailProps) => {
   const {route} = props;
   const {costumer} = route.params;
 

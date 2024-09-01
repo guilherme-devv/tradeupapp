@@ -5,7 +5,7 @@ export interface IAuth{
     loading: boolean;
 }
 
-interface IList{
+export interface IList{
     id: number;
     email: string;
     first_name: string;

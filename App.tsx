@@ -4,13 +4,14 @@ import Loading from './src/components/loading';
 import GeralProvider from './src/context';
 
 import Routes from './src/routes/navigation/Routes';
+import { IList } from './src/context/typescript';
 
 declare global {
     namespace ReactNavigation {
         interface RootParamList {
             List?: string;
             SignIn?: string;
-            Detail?: string;
+            Detail?: { costumer: IList };
         }
     }
 }
