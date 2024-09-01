@@ -80,6 +80,7 @@ const SignIn = () => {
                 value={email}
                 set={value => setAuth({...auth, email: value})}
                 color={colors.button_dark}
+                keyboardType='email-address'
               />
               <Inp
                 title="Senha"

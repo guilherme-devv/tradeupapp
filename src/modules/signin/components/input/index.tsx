@@ -21,6 +21,8 @@ const Inp = (props: IInput) => {
         {props.hide ? (
           <TInput
             value={props.value}
+            placeholder='Senha'
+             autoCapitalize="none"
             onChangeText={props.set}
             keyboardType={props.keyboardType}
             color={props.color}
@@ -29,6 +31,8 @@ const Inp = (props: IInput) => {
         ) : (
           <TInput
             value={props.value}
+            placeholder='E-mail'
+            autoCapitalize="none"
             onChangeText={props.set}
             keyboardType={props.keyboardType}
             color={props.color}
