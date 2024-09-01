@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import SBar from '../../components/statusbar';
@@ -16,7 +16,7 @@ const Routes = () => {
       <SBar />
       <Stack.Navigator>
         <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false  }} />
-        <Stack.Screen name="List" component={List} options={{ title: "Lista de Usuários"}} />
+        <Stack.Screen name="List" component={List} options={{ title: "Lista de Usuários", }} />
         <Stack.Screen name="Detail" component={Detail} options={{ title:"Detalhe do Usuário"}} />
       </Stack.Navigator>
     </NavigationContainer>

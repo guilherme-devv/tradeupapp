@@ -10,8 +10,8 @@ const iniAuth: IAuth = {
 
 const iniUsers: IUsers = {
     loading: false,
-    page: null,
-    total_pages: null,
+    page: 0,
+    total_pages: 0,
     list: []
 };
 

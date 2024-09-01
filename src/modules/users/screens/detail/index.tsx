@@ -32,11 +32,11 @@ const Detail = (props: DetailProps) => {
           <Card>
             <TextContainer>
               <TextTitle>Nome</TextTitle>
-              <TextItem>{costumer.first_name} {costumer.last_name}</TextItem>
+              <TextItem>{costumer.first_name ?? "Sem nome"} {costumer.last_name}</TextItem>
             </TextContainer>
             <TextContainer>
               <TextTitle>E-mail</TextTitle>
-              <TextItem>{costumer.email}</TextItem>
+              <TextItem>{costumer.email ?? "Sem e-mail"}</TextItem>
             </TextContainer>
           </Card>
         </Body>
