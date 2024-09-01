@@ -71,7 +71,7 @@ export default GeralProvider;
 export const useGeral = (): IHookGeral => {
     const context = useContext(GeralContext);
     if (context === undefined) {
-        throw new Error('useGeral must be used within a GeralProvider');
+        throw new Error('Error');
     }
     return context;
 };
