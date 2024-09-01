@@ -18,12 +18,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Clone o repositório e acesse a pasta;
 - Instale as dependências com `yarn ou npm i`;
 - Executa projeto com `yarn start ou npm start`;
+- Escanear QRcode utilizando aplicativo expo ou utilizar diretamente um emulador(`yarn android ou yarn ios`;)
 - Insira as seguites credenciais: 
 ```js
-{
     email: eve.holt@reqres.in
     senha: cityslicka
-}
 ```
 
 ## 📄 Licença
