@@ -11,7 +11,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [ContextAPI]
 - [ReactNavigation](https://reactnavigation.org/)
 - [Styled-Components](https://styled-components.com/)
-- [React](https://pt-br.reactjs.org/)
+- [Expo](https://expo.dev/)
 
 ## 🚀 Como executar
 
